@@ -1,9 +1,5 @@
 package main
 
-import (
-	"strconv"
-)
-
 type ListNode struct {
 	Val  int
 	Next *ListNode
@@ -11,32 +7,33 @@ type ListNode struct {
 
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 
-	var result *ListNode = &ListNode{}
-	for _, e := range strconv.Itoa(nodeListToNumber(l1) + nodeListToNumber(l2)) {
-		result.Val = int(e - 48)
+	root := new(ListNode)
+	actual := root
 
-		next := &ListNode{
-			Val:  0,
-			Next: result,
+	var carry int = 0
+
+	for l1 != nil || l2 != nil || carry > 0 {
+
+		v1, v2, sum := 0, 0, 0
+
+		if l1 != nil {
+			v1 = l1.Val
+			l1 = l1.Next
 		}
 
-		result = next
+		if l2 != nil {
+			v2 = l2.Val
+			l2 = l2.Next
+		}
+
+		sum = v1 + v2 + carry
+		carry = sum / 10
+
+		actual.Next = &ListNode{
+			Val: sum % 10,
+		}
+		actual = actual.Next
 	}
 
-	return result.Next
-}
-
-func nodeListToNumber(n *ListNode) int {
-
-	result := 0
-	nodeCopy := n
-	mult := 1
-
-	for nodeCopy != nil {
-		result += nodeCopy.Val * mult
-		mult *= 10
-		nodeCopy = nodeCopy.Next
-	}
-
-	return result
+	return root.Next
 }
