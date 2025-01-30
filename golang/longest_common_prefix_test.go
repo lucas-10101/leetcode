@@ -21,3 +21,12 @@ func TestLongestCommonPrefixCase2(t *testing.T) {
 		t.Fail()
 	}
 }
+
+func TestLongestCommonPrefixCase3(t *testing.T) {
+
+	r := longestCommonPrefix([]string{"dog"})
+
+	if r != "dog" {
+		t.Fail()
+	}
+}

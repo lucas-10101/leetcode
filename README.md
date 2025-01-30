@@ -4,7 +4,7 @@ Este projeto esta organizado em sub pastas de acordo com a linguagem utilizada p
 
 ## Linguagens utilizadas até o momento:
 
-- Java
+- Java (descontinuado)
 - Golang
 
 # Concluidos
@@ -13,3 +13,4 @@ Este projeto esta organizado em sub pastas de acordo com a linguagem utilizada p
 - ##### 02. Add Two Numbers (Golang)
 - ##### 11. romanToInt (Golang)
 - ##### 13. Roman to Integer (Golang)
+- ##### 14. Longest Common Prefix (Golang)
