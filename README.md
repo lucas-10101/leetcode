@@ -7,6 +7,10 @@ Este projeto esta organizado em sub pastas de acordo com a linguagem utilizada p
 - Java (descontinuado)
 - Golang (preferido, uso reduzido de bibliotecas e funções auxiliares)
 
+## Executar testes
+
+- go test ./...
+
 # Concluidos
 
 - ##### 01. Two Sum (Java) (removed after 119d108)
