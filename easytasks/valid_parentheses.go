@@ -1,6 +1,6 @@
-package golang
+package easytasks
 
-func IsValid(s string) bool {
+func isValid(s string) bool {
 
 	const (
 		PARENTHESIS_OPEN  = 40

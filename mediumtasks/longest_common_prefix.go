@@ -1,4 +1,4 @@
-package golang
+package mediumtasks
 
 func longestCommonPrefix(strs []string) string {
 

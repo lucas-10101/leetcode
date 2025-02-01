@@ -1,11 +1,11 @@
-package golang
+package mediumtasks
 
 type ListNode struct {
 	Val  int
 	Next *ListNode
 }
 
-func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
+func AddTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 
 	root := new(ListNode)
 	actual := root

@@ -1,4 +1,4 @@
-package golang
+package easytasks
 
 import (
 	"strconv"

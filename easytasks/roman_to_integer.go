@@ -1,4 +1,4 @@
-package golang
+package easytasks
 
 func romanToInt(s string) int {
 

@@ -9,7 +9,7 @@ Este projeto esta organizado em sub pastas de acordo com a linguagem utilizada p
 
 # Concluidos
 
-- ##### 01. Two Sum (Java)
+- ##### 01. Two Sum (Java) (removed after 119d108)
 - ##### 02. Add Two Numbers (Golang)
 - ##### 11. romanToInt (Golang)
 - ##### 13. Roman to Integer (Golang)
