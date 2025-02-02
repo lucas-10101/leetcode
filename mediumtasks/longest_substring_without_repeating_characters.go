@@ -2,22 +2,29 @@ package mediumtasks
 
 func lengthOfLongestSubstring(s string) int {
 
-	max := 0
-	chars := map[byte]int{}
-	for i := 0; i < len(s); {
-		old, present := chars[s[i]]
-		chars[s[i]] = i
+	var max, leftWindow int
+	lastPositions := map[byte]int{}
 
-		if max < len(chars) {
-			max = len(chars)
+	// " "
+	for i := 0; i < len(s); i++ {
+
+		lastPos, found := lastPositions[s[i]]
+
+		if found {
+			if max < (i - leftWindow) {
+				max = i - leftWindow
+			}
+
+			if lastPos >= leftWindow {
+				leftWindow = lastPos + 1
+			}
 		}
 
-		if present {
-			clear(chars)
-			i = old + 1
-			continue
-		}
-		i++
+		lastPositions[s[i]] = i
+	}
+
+	if max < (len(s) - leftWindow) {
+		max = len(s) - leftWindow
 	}
 
 	return max
